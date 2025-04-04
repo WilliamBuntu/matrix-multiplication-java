@@ -12,7 +12,7 @@ Features
 
 Installation
 bashCopy# Clone the repository
-git clone https://github.com/yourusername/matrix-multiplication.git
+git clone https://github.com/WilliamBuntu/matrix-multiplication-java.git
 
 # Navigate to the project directory
 cd matrix-multiplication
