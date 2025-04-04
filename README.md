@@ -10,6 +10,7 @@ Features
 ✅ Error handling for invalid inputs
 ✅ Clean display of the resulting matrix
 
+
 Installation
 bashCopy# Clone the repository
 git clone https://github.com/WilliamBuntu/matrix-multiplication-java.git
