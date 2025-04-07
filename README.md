@@ -1,38 +1,40 @@
-A command-line Java application that performs matrix multiplication between two user-provided matrices.
-Description
-This application allows users to input two matrices of compatible dimensions and calculates their product.
-It features robust input validation, error handling, and a clean display of the resulting matrix.
-Features
+# Matrix Calculator
 
-✅ Interactive command-line interface
-✅ Support for matrices of any valid dimension
-✅ Input validation to ensure matrices can be multiplied (columns of A = rows of B)
-✅ Error handling for invalid inputs
-✅ Clean display of the resulting matrix
+A Java console application that performs matrix multiplication.
 
+## Description
 
-Installation
-bashCopy# Clone the repository
-git clone https://github.com/WilliamBuntu/matrix-multiplication-java.git
+This program allows users to input two matrices (A and B) and calculates their product (C = A × B). It handles user input validation and provides meaningful error messages when invalid inputs are detected.
 
-# Navigate to the project directory
-cd matrix-multiplication
+## Features
 
-# Compile the Java code
-javac Main.java
-Usage
-bashCopy# Run the program
-java Main
-Follow the prompts to:
+- Interactive console-based interface
+- User-defined matrix dimensions
+- Input validation for:
+  - Matrix dimensions compatibility
+  - Proper number of elements in each row
+  - Numeric values
+- Clear display of the resulting matrix
+- Comprehensive error handling
 
-Enter the dimensions of matrix A
-Input the elements of matrix A
-Enter the dimensions of matrix B
-Input the elements of matrix B
+## How to Use
 
-The program will calculate and display the resulting matrix C.
-Example
-CopyProvide matrix A dimensions (rows, columns)
+1. Run the program
+2. Enter the dimensions of matrix A (rows, columns)
+3. Input the elements of matrix A row by row
+4. Enter the dimensions of matrix B (rows, columns)
+5. Input the elements of matrix B row by row
+6. View the resulting matrix C
+
+## Input Format
+
+- Matrix dimensions should be entered as: `rows, columns` (e.g., `3, 2`)
+- Matrix elements should be entered row by row, separated by spaces (e.g., `1 2 3`)
+
+## Example
+
+```
+Provide matrix A dimensions (rows, columns)
 2, 3
 Enter matrix A elements (row by row)
 1 2 3
@@ -47,19 +49,24 @@ Enter matrix B elements (row by row)
 Matrix C:
 |58 64|
 |139 154|
-Implementation Details
+```
 
-Uses nested loops for matrix multiplication with time complexity O(n³)
-Implements proper resource management with try-with-resources for Scanner
-Displays integers without decimal places for cleaner output
+## Mathematical Background
 
-Future Improvements
+For matrix multiplication to be valid, the number of columns in matrix A must equal the number of rows in matrix B. The resulting matrix C will have dimensions: (rows of A) × (columns of B).
 
-Add support for file input/output
-Implement more efficient matrix multiplication algorithms
-Add options for other matrix operations (addition, subtraction, determinant)
-Improve display formatting for decimal values
+## Methods
 
+- `multiplyMatrices(double[][] matrix_A, double[][] matrix_B)`: Performs matrix multiplication
+- `displayMatrix(double[][] matrix)`: Prints a matrix to the console
 
-Author
-Your Name - Buntu william
+## Error Handling
+
+The program handles several types of exceptions:
+- `NumberFormatException`: When non-numeric values are entered
+- `IllegalArgumentException`: When matrix dimensions are incompatible or row element counts are incorrect
+- General exceptions with appropriate error messages
+
+## Requirements
+
+- Java SE 8 or higher
